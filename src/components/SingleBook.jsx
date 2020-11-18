@@ -1,6 +1,7 @@
 import React from "react";
 import { Card, Col, Button } from "react-bootstrap";
 import "../style.css";
+import MyBadge from "./MyBadge.jsx";
 
 class SingleBook extends React.Component {
   state = {
@@ -25,6 +26,7 @@ class SingleBook extends React.Component {
             />
           </div>
           <div className="card-body">
+          <MyBadge category={this.props.category}  />
             <h6 className="bookTitle">{this.props.title}</h6>
             <Button className="btn-warning">€{this.props.price}</Button>
           </div>

@@ -1,14 +1,31 @@
 import React from "react"
 import { Badge } from "react-bootstrap";
 
-class MyBadge extends React.Component {
-    render() {
-        return (
-            <div><h6>
-                <Badge style={{ backgroundColor: "#E0A800", color: "black" }} >New</Badge>
-            </h6></div>
-        )
+function MyBadge({ category }) {
+    
+    let color;
+    switch (category) {
+      case "fantasy":
+        color = "primary";
+        break;
+      case "horror":
+        color = "secondary";
+        break;
+      case "scifi":
+        color = "success";
+        break;
+      case "romance":
+        color = "danger";
+        break;
+      case "history":
+        color = "info";
+        break;
     }
-}
 
+    return (
+        <Badge variant={color} className="mt-1">
+        {category}
+      </Badge>
+    );
+}
 export default MyBadge
