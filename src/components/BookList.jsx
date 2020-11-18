@@ -36,7 +36,7 @@ class BookList extends React.Component {
             />
           </InputGroup>
             <Row className="mt-4">
-            {this.state.books ? (Fantasy.map((item) => { 
+            {this.state.books ? (this.state.books.map((item) => { 
                 
                     return (
                         <SingleBook title = {item.title} image ={item.img} key={item.asin} price={item.price}/>
