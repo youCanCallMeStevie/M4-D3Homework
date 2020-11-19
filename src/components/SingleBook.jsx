@@ -12,8 +12,9 @@ class SingleBook extends React.Component {
     element.classList.toggle("selectedCard")
 
 }
-
   render() {
+    console.log(this.props.category);
+
     return (
       <Col xs={1} md={3} lg={2}>
         <Card className="card ">
@@ -26,7 +27,7 @@ class SingleBook extends React.Component {
             />
           </div>
           <div className="card-body">
-          <MyBadge category={this.props.category}  />
+            <MyBadge category={this.props.category}/>
             <h6 className="bookTitle">{this.props.title}</h6>
             <Button className="btn-warning">€{this.props.price}</Button>
           </div>

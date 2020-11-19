@@ -3,7 +3,7 @@ import Fantasy from "../data/fantasy.json"
 import SingleBook from "./SingleBook.jsx"
 import "../style.css"
 
-import { Col, Row, InputGroup, FormControl } from "react-bootstrap"
+import {Row, InputGroup, FormControl } from "react-bootstrap"
 
 class BookList extends React.Component {
     state = {
@@ -39,7 +39,7 @@ class BookList extends React.Component {
             {this.state.books ? (this.state.books.map((item) => { 
                 
                     return (
-                        <SingleBook title = {item.title} image ={item.img} key={item.asin} price={item.price}/>
+                        <SingleBook title = {item.title} image ={item.img} key={item.asin} category={item.category} price={item.price}/>
                         );
                     })
                   ) : (

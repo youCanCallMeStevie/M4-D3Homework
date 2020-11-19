@@ -21,6 +21,7 @@ function MyBadge({ category }) {
         color = "info";
         break;
     }
+    console.log(category);
 
     return (
         <Badge variant={color} className="mt-1">
